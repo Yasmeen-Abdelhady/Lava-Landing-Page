@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #232323;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#contact-us h3, #products h3, #about-us .content h3 {
+  font-size: 42px;
+  color: rgb(255, 129, 57);
+  font-weight: 600;
+  position: relative;
+}
+#contact-us h3::after, #products h3::after, #about-us .content h3::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: rgb(255, 129, 57);
+}
+
+nav .navbar-brand {
+  color: rgba(255, 255, 255, 0.8);
+}
+@media (max-width: 992px) {
+  nav .navbar-brand {
+    color: black;
+  }
+}
+nav i {
+  font-weight: bold;
+  font-size: 30px;
+}
+nav .navbar-nav a.nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+nav .navbar-nav a.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0%;
+  height: 3px;
+  background-color: rgb(255, 129, 57);
+  transition: 0.4s ease-in-out;
+}
+@media (max-width: 992px) {
+  nav .navbar-nav a.nav-link::after {
+    bottom: 0;
+  }
+}
+nav .navbar-nav a.nav-link:hover {
+  color: rgb(255, 129, 57);
+}
+nav .navbar-nav a.nav-link:hover::after {
+  width: 100%;
+}
+@media (max-width: 992px) {
+  nav .navbar-nav a.nav-link {
+    color: black;
+  }
+}
+nav .navbar-nav .btn-navbar {
+  background-color: rgb(36, 193, 255);
+  color: rgba(255, 255, 255, 0.8);
+}
+nav .navbar-nav .btn-navbar:hover {
+  background-color: transparent;
+  border: 1px solid rgb(255, 129, 57);
+  color: rgb(255, 129, 57);
+  transition: 0.4s ease-in-out;
+}
+@media (max-width: 992px) {
+  nav {
+    background-color: white;
+    color: black;
+  }
+}
+
+#home {
+  height: calc(100vh - 58px);
+}
+#home .container, #home .row {
+  height: 100%;
+}
+#home img {
+  width: 500px;
+  max-width: 100%;
+}
+#home h1 {
+  font-size: 42px;
+}
+#home h1 span {
+  color: rgb(255, 129, 57);
+}
+#home .btns a {
+  transition: 0.4s ease-in-out;
+}
+#home .btns a:first-child {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(36, 193, 255);
+}
+#home .btns a:first-child:hover {
+  color: rgb(255, 129, 57);
+  border: 1px solid rgb(255, 129, 57);
+  background-color: transparent;
+}
+#home .btns a:last-child {
+  border: 1px solid rgb(36, 193, 255);
+  color: rgb(36, 193, 255);
+}
+#home .btns a:last-child:hover {
+  border-color: rgb(255, 129, 57);
+  color: rgb(255, 129, 57);
+}
+
+#about-us {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#about-us .container {
+  background-color: rgb(54, 54, 54);
+}
+#about-us .content p {
+  color: rgba(255, 255, 255, 0.69);
+}
+#about-us .content a.btn {
+  background-color: transparent;
+  border: 1px solid rgb(255, 129, 57);
+  color: rgb(255, 129, 57);
+  border-radius: 0;
+  position: relative;
+  z-index: 4;
+}
+#about-us .content a.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(255, 129, 57);
+  z-index: -1;
+  transition: 0.4s ease-in-out;
+}
+#about-us .content a.btn:hover {
+  transition: 0.4s ease-in-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+#about-us .content a.btn:hover::before {
+  width: 100%;
+}
+#about-us img {
+  height: 100%;
+  max-width: 100%;
+}
+@media (min-width: 992px) {
+  #about-us img {
+    transform: scaleY(1.2);
+  }
+}
+
+#products {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#products .carousel {
+  margin-top: 70px;
+}
+#products .carousel .carousel-control-prev, #products .carousel .carousel-control-next {
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  bottom: 50%;
+  padding: 0px;
+  border: 0;
+  border-radius: 30px;
+  background-color: #444;
+  color: #100f10;
+  font-size: 18px;
+}
+#products .card {
+  background-color: #242424;
+}
+#products .card img {
+  max-width: 100%;
+}
+#products .card h5 {
+  color: rgb(255, 129, 57);
+  border-bottom: 1px solid rgb(255, 129, 57);
+  font-size: 17px;
+  padding-bottom: 5px;
+}
+#products .card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 2;
+}
+#products .card a {
+  color: rgb(255, 129, 57);
+  padding: 0;
+}
+#products .card a:hover {
+  color: rgb(250, 183, 144);
+}
+
+.opinion {
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+.opinion .title h2 {
+  font-size: 42px;
+}
+.opinion .title h2 span {
+  color: rgb(255, 129, 57);
+}
+.opinion .title p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 760px;
+  margin: 20px auto;
+}
+.opinion .slide .carousel-inner {
+  padding: 40px 20px;
+}
+.opinion .slide .carousel-inner .box {
+  background-color: rgb(255, 129, 57);
+  background: linear-gradient(0deg, rgb(255, 129, 57) 0%, rgba(233, 65, 57, 0.8580474426) 100%);
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 70px;
+}
+.opinion .slide .carousel-inner .box:hover {
+  transition: 0.4s ease-in-out;
+  top: -10px;
+}
+.opinion .slide .carousel-inner .box .image {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: -50px;
+}
+.opinion .slide .carousel-inner .box .image img {
+  max-width: 100%;
+  height: 100%;
+}
+.opinion .slide button {
+  width: 30px;
+  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#contact-us form {
+  background-color: rgb(54, 54, 54);
+}
+#contact-us form input, #contact-us form textarea {
+  background-color: transparent;
+  padding: 10px;
+  color: #aaa;
+  border-color: #aaa;
+}
+#contact-us form input:focus, #contact-us form textarea:focus {
+  background-color: white;
+  color: black;
+}
+#contact-us form textarea {
+  height: 150px;
+  resize: none;
+}
+#contact-us form button {
+  background-color: rgb(255, 129, 57);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  padding: 10px 15px;
+  display: block;
+  margin: 30px auto;
+  margin-bottom: 10px;
+}
+#contact-us .content span {
+  color: rgb(255, 129, 57);
+}
+#contact-us .content p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+footer span {
+  color: rgb(255, 129, 57);
+}/*# sourceMappingURL=style.css.map */
